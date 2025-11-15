@@ -56,7 +56,7 @@
   <main id="main-content" class="container mb-5">
     <header class="mb-4 text-center">
       <h1 class="display-5">Campus Events</h1>
-      <p class="lead">Find something to do – from games to club meetings.</p>
+      <p class="lead">Find something to do!</p>
     </header>
 
     <!-- Filters -->
@@ -78,22 +78,17 @@
       </div>
     </section>
 
-    <!-- Events List -->
     <section aria-label="Upcoming events">
       <div class="row g-4" id="events-list">
-        <!-- Example Event -->
         <article class="col-md-6 event-card" data-category="sports">
           <div class="card shadow-sm h-100">
             <div class="card-body">
               <div class="d-flex justify-content-between align-items-start">
-                <h2 class="h5 card-title mb-1">Men's Soccer vs Rival College</h2>
-                <button class="btn btn-sm btn-outline-warning favorite-btn" aria-label="Save this event">
-                  ☆
-                </button>
+                <h2 class="h5 card-title mb-1">Men's Soccer vs Wingate</h2>
               </div>
-              <p class="card-text mb-1"><strong>Date:</strong> October 30, 7:00 PM</p>
-              <p class="card-text mb-1"><strong>Location:</strong> Main Stadium</p>
-              <p class="card-text">Come support the team under the lights!</p>
+              <p class="card-text mb-1"><strong>Date:</strong> December 1, 7:00 PM</p>
+              <p class="card-text mb-1"><strong>Location:</strong> Soccer feild</p>
+              <p class="card-text">Come support the team!</p>
             </div>
           </div>
         </article>
@@ -103,14 +98,11 @@
             <div class="card-body">
               <div class="d-flex justify-content-between align-items-start">
                 <h2 class="h5 card-title mb-1">CS Tutoring Night</h2>
-                <button class="btn btn-sm btn-outline-warning favorite-btn" aria-label="Save this event">
-                  ☆
-                </button>
               </div>
-              <p class="card-text mb-1"><strong>Date:</strong> November 1, 6:00 PM</p>
-              <p class="card-text mb-1"><strong>Location:</strong> CS Lab 101</p>
+              <p class="card-text mb-1"><strong>Date:</strong> December 1, 8:00 PM</p>
+              <p class="card-text mb-1"><strong>Location:</strong> Math room 101</p>
               <p class="card-text">
-                Need help with web dev or Python? Drop in and get one-on-one help.
+                Need help with Calculus 1? Come stop by and get one on one help.
               </p>
             </div>
           </div>
@@ -121,14 +113,11 @@
             <div class="card-body">
               <div class="d-flex justify-content-between align-items-start">
                 <h2 class="h5 card-title mb-1">Campus Cookout & Game Night</h2>
-                <button class="btn btn-sm btn-outline-warning favorite-btn" aria-label="Save this event">
-                  ☆
-                </button>
               </div>
-              <p class="card-text mb-1"><strong>Date:</strong> November 3, 5:00 PM</p>
-              <p class="card-text mb-1"><strong>Location:</strong> Quad</p>
+              <p class="card-text mb-1"><strong>Date:</strong> December 1, 6:00 PM</p>
+              <p class="card-text mb-1"><strong>Location:</strong> Grass area in front of Walker.</p>
               <p class="card-text">
-                Food, music, and games – meet new people and relax.
+                Food, music, and games!
               </p>
             </div>
           </div>
@@ -136,21 +125,9 @@
       </div>
     </section>
 
-    <!-- Favorites -->
-    <section class="mt-5" aria-label="Saved events">
-      <h2 class="h5 mb-3">My Saved Events</h2>
-      <p class="text-muted" id="favorites-empty-text">
-        You haven’t saved any events yet. Tap the ☆ button to add some.
-      </p>
-      <div class="row g-4" id="favorites-list">
-        <!-- Filled by JS when user saves events -->
-      </div>
     </section>
   </main>
 
-  <footer class="bg-light py-3 text-center small">
-    <p class="mb-0">&copy; <span id="year"></span> Campus Life Super App</p>
-  </footer>
 
   <!-- Bootstrap JS -->
   <script
