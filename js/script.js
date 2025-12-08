@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const page = document.body.dataset.page;
-r
+
   const yearSpan = document.getElementById("year");
   if (yearSpan) {
     yearSpan.textContent = new Date().getFullYear();
@@ -56,34 +56,6 @@ function initWeatherWidget() {
 }
 
 
-function initQuoteWidget() {
-  const quoteText = document.getElementById("quote-text");
-  const quoteAuthor = document.getElementById("quote-author");
-  const newQuoteBtn = document.getElementById("new-quote");
-
-  if (!quoteText || !quoteAuthor || !newQuoteBtn) return;
-
-  async function fetchQuote() {
-    try {
-      const response = await fetch("https://api.quotable.io/random?tags=inspirational|motivational");
-      if (!response.ok) throw new Error("Quote request failed");
-      const data = await response.json();
-
-      quoteText.textContent = data.content;
-      quoteAuthor.textContent = data.author ? `— ${data.author}` : "— Unknown";
-    } catch (error) {
-      console.error(error);
-      quoteText.textContent = "Unable to load quote. Try again.";
-      quoteAuthor.textContent = "";
-    }
-  }
-
-  newQuoteBtn.addEventListener("click", fetchQuote);
-
-  fetchQuote();
-}
-
-
 function initEventFilters() {
   const filterButtons = document.querySelectorAll(".event-filter");
   const eventCards = document.querySelectorAll(".event-card");
@@ -92,7 +64,6 @@ function initEventFilters() {
 
   filterButtons.forEach((btn) => {
     btn.addEventListener("click", () => {
-
       filterButtons.forEach((b) => b.classList.remove("active"));
       btn.classList.add("active");
 
@@ -109,7 +80,6 @@ function initEventFilters() {
     });
   });
 }
-
 
 function initFavorites() {
   const favoritesList = document.getElementById("favorites-list");
@@ -162,8 +132,6 @@ function initFavorites() {
 
   renderFavorites();
 }
-
-
 
 function initTodoList() {
   const form = document.getElementById("todo-form");
@@ -239,7 +207,6 @@ function initTodoList() {
 
   renderTodos();
 }
-
 
 function initTimer() {
   const display = document.getElementById("timer-display");
