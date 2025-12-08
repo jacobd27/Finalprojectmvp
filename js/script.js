@@ -30,19 +30,19 @@ function initWeatherWidget() {
 
   async function fetchWeather() {
     try {
-      // TODO: Replace with your real API key and preferred city.
-      const apiKey = "YOUR_OPENWEATHERMAP_API_KEY";
-      const city = "Newberry";
-      const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`;
+      // WeatherAPI.com configuration
+      const apiKey = "a9c142f7ef5d40949d030700250812";
+      const city = "Newberry,SC";
+      const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`;
 
       const response = await fetch(url);
       if (!response.ok) throw new Error("Weather request failed");
 
       const data = await response.json();
 
-      locationEl.textContent = `${data.name}`;
-      tempEl.textContent = `${Math.round(data.main.temp)} °F`;
-      descEl.textContent = data.weather[0].description;
+      locationEl.textContent = `${data.location.name}, ${data.location.region}`;
+      tempEl.textContent = `${Math.round(data.current.temp_f)} °F`;
+      descEl.textContent = data.current.condition.text;
     } catch (error) {
       console.error(error);
       locationEl.textContent = "Unavailable";
@@ -54,7 +54,6 @@ function initWeatherWidget() {
   refreshBtn.addEventListener("click", fetchWeather);
   fetchWeather();
 }
-
 
 
 function initQuoteWidget() {
